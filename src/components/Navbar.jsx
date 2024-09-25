@@ -20,12 +20,6 @@ function Navbar() {
               ShoeStore
             </a>
           </div>
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="/" className="text-gray-600 hover:text-gray-900">Home</a>
-            <a href="/men" className="text-gray-600 hover:text-gray-900">Men</a>
-            <a href="/women" className="text-gray-600 hover:text-gray-900">Women</a>
-            <a href="/kids" className="text-gray-600 hover:text-gray-900">Kids</a>
-          </div>
           <div className="flex items-center space-x-4">
             <div className="hidden md:block">
               <Input type="search" placeholder="Search..." className="w-64" />

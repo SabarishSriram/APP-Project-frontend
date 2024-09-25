@@ -1,10 +1,12 @@
 
-import { ShoppingCart, Search, Menu, X, ChevronDown } from 'lucide-react'
+import { ShoppingCart, Search, Menu, X, ChevronDown, Sidebar } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {shoes} from "./lib/shoes.js"
 import Navbar from './components/Navbar.jsx'
+import Dashboard from './components/Dashboard.jsx'
+
 
 export default function ShoeStore() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -24,43 +26,7 @@ export default function ShoeStore() {
 
       <div className="flex flex-1">
         {/* Sidebar */}
-        <aside className={`${sidebarOpen ? 'block' : 'hidden'} lg:block w-64 bg-gray-100 p-4 fixed inset-y-0 left-0 z-10 overflow-y-auto transition-all duration-300 ease-in-out lg:relative lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-          <div className="flex justify-between items-center lg:hidden">
-            <h2 className="text-xl font-semibold">Categories</h2>
-            <Button variant="ghost" size="icon" onClick={toggleSidebar}>
-              <X className="h-5 w-5" />
-            </Button>
-          </div>
-          <nav className="mt-8">
-            <ul className="space-y-2">
-              <li>
-                <Button variant="ghost" className="w-full justify-between">
-                  Men <ChevronDown className="h-4 w-4" />
-                </Button>
-              </li>
-              <li>
-                <Button variant="ghost" className="w-full justify-between">
-                  Women <ChevronDown className="h-4 w-4" />
-                </Button>
-              </li>
-              <li>
-                <Button variant="ghost" className="w-full justify-between">
-                  Kids <ChevronDown className="h-4 w-4" />
-                </Button>
-              </li>
-              <li>
-                <Button variant="ghost" className="w-full justify-between">
-                  Brands <ChevronDown className="h-4 w-4" />
-                </Button>
-              </li>
-              <li>
-                <Button variant="ghost" className="w-full justify-between">
-                  Sale <ChevronDown className="h-4 w-4" />
-                </Button>
-              </li>
-            </ul>
-          </nav>
-        </aside>
+        <Dashboard/>
 
         {/* Main content */}
         <main className="flex-grow container mx-auto px-4 py-8 lg:ml-6">
